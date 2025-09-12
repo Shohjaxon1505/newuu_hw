@@ -3,74 +3,73 @@
 using namespace std;
 int main() {
     {
-        int intNumber = 30;
-        float floatNumber = 3.14f;
-        double doubleNumber = 45.1234;
-        bool boolean = true;
-        char charName = 'A';
-        cout << "Value of Integer is " << intNumber << ". Size is " << sizeof(intNumber) << endl;
-        cout << "Value of Float is " << floatNumber << ". Size is " << sizeof(floatNumber) << endl;
-        cout << "Value of Double is " << doubleNumber << ". Size is " << sizeof(doubleNumber) << endl;
-        cout << "Value of Char is " << charName << ". Size is " << sizeof(charName) << endl;
-        cout << "Value of Bool is " << boolean << ". Size is " << sizeof(boolean) << endl;
+        double a = 1.13e3, b = 411e-4;
+        cout << a << " " << b << endl;
     }
     {
-        cout << "Shohjahon Komiljonov\n";
-        cout << "250269\n";
-        cout << "Neboley - Zivert, Basta\n";
-        cout << "Cars 3\n";
+        int admitted = 241, groups = 11;
+        int perGroup = admitted / groups;
+        int remainder = admitted % groups;
+        cout << "In first group: " << perGroup + (remainder > 0) << endl;
+        cout << "In last group: " << remainder << endl;
     }
     {
-        cout << "\"I’m standing\" on the edge of some crazy cliff.\n";
-        cout << "What I have to do, I have to catch everybody\\\n";
-        cout << "if they start to go over the cliff—I mean\\\n";
-        cout << "\\if they’re running and they don’t look\n";
-        cout << "where they’re going I have to come out\n";
-        cout << "from somewhere and catch them.\n";
+        double s;
+        cin >> s;
+        double area = (3 * sqrt(3) / 2) * s * s;
+        cout << "The area of the hexagon is " << area << endl;
     }
     {
-        int a = 189;
-        char b = 'B';
-        float res1 = a / 3.0f;
-        int res2 = int(b);
-        float res3 = (a + b) / 5.0f;
-        char res4 = char(b + (a/10 - 1));
-        cout << res1 << " " << res2 << " " << res3 << " " << res4 << endl;
+        int num = 31;
+        num++;
+        num = num * 3;
+        num = num - 14;
+        num = num / 4;
+        num = num - 1;
+        num = num % 9;
+        cout << num << endl;
     }
     {
-        int a = 12, b = 38;
-        cout << "Sum=" << a + b << endl;
-        cout << "Product=" << a * b << endl;
+        char c = 'A';
+        cout << char(c+7) << char(c+4) << char(c+11) << char(c+11) << char(c+14) << char(c-32) << endl;
     }
     {
-        int x, y;
-        cin >> x >> y;
-        cout << "Sum: " << x << " + " << y << " = " << x + y << endl;
+        float x = 17, y = 1;
+        float z = (x + (++x)) / (3 * 2);
+        cout << z << endl;
+    }
+    {
+        int a, b;
+        cin >> a >> b;
+        cout << (a == b) << endl;
+    }
+    {
+        int a, b;
+        cin >> a >> b;
+        cout << ((a < 140) && (a < b)) << endl;
+    }
+    {
+        int a, b, c;
+        cin >> a >> b >> c;
+        cout << (a > b && a > c) << endl;
+    }
+    {
+        int n1, n2, n3, n4, n5;
+        cin >> n1 >> n2 >> n3 >> n4 >> n5;
+        cout << ((n1 >= 0) || (n2 >= 0) || (n3 >= 0) || (n4 >= 0) || (n5 >= 0)) << endl;
+    }
+    {
+        int a, b;
+        cin >> a >> b;
+        cout << ((a+b>30 && a*b>30)?1:0) << " ";
+        cout << (((a+(b-10))>30 || (a*(b-10))>30)?1:0) << " ";
+        cout << ((a>30 || b>30)?1:0) << endl;
     }
     {
         double x, y;
         cin >> x >> y;
-        double t = 3 * (pow(x, 2) + 3) / (pow(y, 4) + 3);
-        cout << "t=" << t << endl;
-    }
-    {
-        double d;
-        cin >> d;
-        double r = d / 2.0;
-        double area = 4 * M_PI * r * r;
-        cout << "Area: " << area << endl;
-    }
-    {
-        double v0, v1, t;
-        cin >> v0 >> v1 >> t;
-        double a = (v1 - v0) / t;
-        cout << a << endl;
-    }
-    {
-        double distance, mpg, price;
-        cin >> distance >> mpg >> price;
-        double cost = (distance / mpg) * price;
-        cout << "The cost of driving is $" << cost << endl;
+        double mike = y * 30.48;
+        cout << (mike > x) << endl;
     }
     return 0;
 }
